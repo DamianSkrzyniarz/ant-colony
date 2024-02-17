@@ -5,8 +5,10 @@ public class Link {
     private Node start;
     private Node finish;
     private float distance;
+    private float popularity;
 
     public Link(Node start, Node finish) {
+        this.popularity = 0;
         this.start = start;
         this.finish = finish;
         float widthDifference = Math.abs(start.getWidth() - finish.getWidth());
@@ -38,6 +40,17 @@ public class Link {
 
     public void setDistance(float distance) {
         this.distance = distance;
+    }
+
+    public float getPopularity() {
+        return popularity;
+    }
+
+    public void setPopularity(float popularity) {
+        this.popularity = popularity;
+    }
+    public void increasePopularity(float amount) {
+        this.popularity += amount;
     }
 
     @Override

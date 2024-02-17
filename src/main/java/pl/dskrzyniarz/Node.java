@@ -9,9 +9,9 @@ public class Node {
     private char id;
 
     private static List<Node> globalNodeList;
-    private List<Link> linkList;
+    private final List<Link> linkList;
 
-    public Node(char id, int width, int height) {
+    public Node(char id, float width, float height) {
         this.id = id;
         this.width = width;
         this.height = height;
